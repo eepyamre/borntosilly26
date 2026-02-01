@@ -54,7 +54,7 @@ export const Upload = () => {
           </div>
         </div>
         <div class={css.downloadWrapper}>
-          <h3 class={css.uploadTitle}>Or download the last year pack</h3>
+          <h3 class={css.uploadTitle}>Or download the last year's pack</h3>
           <Button
             href={'https://borntosilly.com/borntosilly.zip'}
             download={'borntosilly2025.zip'}

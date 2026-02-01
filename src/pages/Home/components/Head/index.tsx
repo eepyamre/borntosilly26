@@ -1,3 +1,4 @@
+import { ArrowUp } from '@/icons/ArrowUp';
 import cn from 'classnames';
 
 import silly from '@/assets/silly.webp';
@@ -16,6 +17,10 @@ export const Head = () => {
       </div>
       <div class={css.imgWrapper}>
         <img class={css.img} src={silly} alt="Silly Stuffing" />
+        <div class={css.sillyWrapper}>
+          <span>Look at her go!</span>
+          <ArrowUp class={css.arrow} />
+        </div>
       </div>
     </div>
   );
