@@ -1,0 +1,12 @@
+.link {
+  color: var(--watermelon);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: underline;
+  font-size: inherit;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}

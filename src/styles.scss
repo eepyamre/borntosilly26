@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+@layer {
+  :root {
+    --text: #44484b;
+    --background: #fff7eb;
+    --textFont: 'Kalam', cursive;
+    --secondaryFont: 'Figtree';
+    --citrus: #fed785;
+    --burntOrange: #f7854e;
+    --watermelon: #e57083;
+    --pepper: #61615d;
+    --headerHeight: 72px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    background-color: var(--background);
+    font-family: var(--textFont);
+    overflow-x: hidden;
+    color: var(--text);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  a,
+  p {
+    font-size: 16px;
+  }
+
+  .maxWidth {
+    padding: 0 max(24px, calc((100vw - 1232px) / 2));
+  }
+}
