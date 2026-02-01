@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.item {
+  border: 3px solid var(--salmon);
+  border-radius: 4px;
+  padding: 24px 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  min-width: 200px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--burntOrange);
+  }
+}
+
+.big {
+  font-size: 2.2rem;
+  line-height: 100%;
+  color: var(--watermelon);
+  font-weight: 700;
+}
+
+.small {
+  font-size: 1.5rem;
+  line-height: 100%;
+  font-weight: 700;
+}
