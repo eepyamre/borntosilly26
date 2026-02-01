@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 80px;
+
+  h2 {
+    font-size: 2.5rem;
+    color: var(--burntOrange);
+    background: linear-gradient(
+      135deg,
+      var(--burntOrange) 0%,
+      var(--watermelon) 50%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  p {
+    font-family: var(--secondaryFont);
+  }
+}
+
+.btn {
+  margin-top: 24px;
+}
