@@ -34,6 +34,16 @@
   line-height: 100%;
   border-bottom: 2px solid var(--burntOrange);
   width: fit-content;
+  color: var(--burntOrange);
+  background: linear-gradient(
+    135deg,
+    var(--burntOrange) 0%,
+    var(--watermelon) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
 }
 
 .name {

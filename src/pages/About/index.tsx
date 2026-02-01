@@ -1,6 +1,6 @@
 import { Layout } from '@/components';
 
-import { Contribution, Head, Mascot, Mission } from './components';
+import { Contribution, FAQ, Head, Mascot, Mission } from './components';
 
 export const About = () => {
   return (
@@ -8,6 +8,7 @@ export const About = () => {
       <Head />
       <Mascot />
       <Mission />
+      <FAQ />
       <Contribution />
     </Layout>
   );
