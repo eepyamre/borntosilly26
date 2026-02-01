@@ -3,7 +3,7 @@ import { useState } from 'preact/hooks';
 
 import css from './styles.module.scss';
 
-interface FAQItem {
+type FAQItem {
   question: string;
   answer: string;
 }
