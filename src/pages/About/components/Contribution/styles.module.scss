@@ -5,6 +5,10 @@
   gap: 12px;
   padding-bottom: 80px;
 
+  @media (max-width: 768px) {
+    padding-bottom: 48px;
+  }
+
   h2 {
     font-size: 2.5rem;
     color: var(--burntOrange);
@@ -16,13 +20,28 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      text-align: center;
+    }
   }
 
   p {
     font-family: var(--secondaryFont);
+
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 1rem;
+      padding: 0 16px;
+    }
   }
 }
 
 .btn {
   margin-top: 24px;
+
+  @media (max-width: 768px) {
+    margin-top: 16px;
+  }
 }

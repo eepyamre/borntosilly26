@@ -6,6 +6,10 @@
   flex: 1;
   background-color: #fbead2;
   padding-block: 64px;
+
+  @media (max-width: 768px) {
+    padding-block: 48px;
+  }
 }
 
 .title {
@@ -19,6 +23,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .content {
@@ -26,8 +34,16 @@
   flex-direction: column;
   gap: 4px;
   flex: 1;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 }
 
 .text {
   font-size: 1.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }

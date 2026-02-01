@@ -6,6 +6,12 @@
   flex: 1;
   background-color: #fbead2;
   padding-block: 64px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-block: 48px;
+    gap: 48px;
+  }
 }
 
 .title {
@@ -19,6 +25,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 .raised {
@@ -36,6 +47,12 @@
   box-shadow: 0 0 12px rgba(229, 112, 131, 0.4);
   border-radius: 20px;
   width: fit-content;
+
+  @media (max-width: 768px) {
+    padding: 4rem 2rem;
+    min-width: 200px;
+    width: 100%;
+  }
 }
 
 .subtitle {
@@ -44,6 +61,10 @@
   margin: 0;
   padding: 0;
   line-height: 100%;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
 }
 
 .content {
@@ -51,24 +72,46 @@
   align-items: center;
   flex: 1;
   gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .text {
   margin-top: 16px;
   font-size: 1.5rem;
   font-family: var(--secondaryFont);
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 }
 
 .button {
   margin-top: 32px;
+
+  @media (max-width: 768px) {
+    margin-top: 24px;
+  }
 }
 
 .textWrapper {
   flex: 1;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .description {
   display: block;
   max-width: 500px;
   font-size: 18px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    max-width: 100%;
+  }
 }

@@ -13,11 +13,19 @@
   right: 0;
   background-color: var(--background);
   z-index: 10;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
 }
 
 .links {
   display: flex;
   gap: 32px;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
 }
 
 .link {
@@ -44,6 +52,11 @@
   &:hover:before {
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    padding: 6px 2px;
+  }
 }
 
 .logo {
@@ -53,6 +66,10 @@
 
   &:hover {
     transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    width: 48px;
   }
 }
 

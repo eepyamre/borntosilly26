@@ -6,6 +6,12 @@
   flex: 1;
   background-color: #fbead2;
   padding-block: 128px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-block: 64px;
+    gap: 48px;
+  }
 }
 
 .imgWrapper {
@@ -14,6 +20,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 768px) {
+    order: -1;
+  }
 }
 
 .title {
@@ -27,6 +37,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 .content {
@@ -34,19 +49,33 @@
   flex-direction: column;
   gap: 4px;
   flex: 1;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .description {
   font-size: 1.3rem;
   color: #44484b;
   max-width: 500px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .sillyWrapper {
   position: absolute;
   bottom: -32px;
   left: 64px;
-  transform: rotate(35deg);
+  transform: rotate(20deg);
+
+  @media (max-width: 768px) {
+    top: -32px;
+    left: 80;
+  }
 }
 
 .arrow {
@@ -56,4 +85,10 @@
   right: -42px;
   bottom: 16px;
   transform: rotate(-15deg);
+
+  @media (max-width: 768px) {
+    left: -48px;
+    top: 16px;
+    transform: rotate(-220deg);
+  }
 }

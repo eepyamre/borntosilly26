@@ -3,6 +3,11 @@
   flex: 1;
   flex-direction: row-reverse;
   display: flex;
+  position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 }
 
 .list {
@@ -11,10 +16,19 @@
   flex-direction: column;
   font-family: var(--secondaryFont);
   line-height: 180%;
+  padding-bottom: 220px;
 }
 
 .img {
   width: 500px;
   height: fit-content;
   transform: rotate(180deg) translateY(159px);
+
+  @media (max-width: 768px) {
+    width: 300px;
+    position: absolute;
+    left: calc((100% - 300px) / 2);
+    bottom: -48px;
+    transform: rotate(0);
+  }
 }

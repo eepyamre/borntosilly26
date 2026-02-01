@@ -6,4 +6,9 @@
   height: 72px;
   font-size: 1.2rem;
   border-top: 2px solid var(--burntOrange);
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: -48px;
+  }
 }

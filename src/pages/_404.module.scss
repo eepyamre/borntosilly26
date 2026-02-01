@@ -1,0 +1,42 @@
+.title {
+  font-size: 10rem;
+  text-align: center;
+  color: var(--burntOrange);
+  background: linear-gradient(
+    135deg,
+    var(--burntOrange) 0%,
+    var(--watermelon) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1;
+
+  @media (max-width: 768px) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 4rem;
+  }
+}
+
+.text {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: var(--secondaryFont);
+  color: var(--text);
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+.wrapper {
+  padding: 64px 0;
+}
