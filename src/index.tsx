@@ -7,12 +7,13 @@ import {
   prerender as ssr,
 } from 'preact-iso';
 
-import { About, Archive, Home, NotFound } from './pages';
+import { About, Archive, Contacts, Home, NotFound } from './pages';
 
 export const routes = {
   ['/']: Home,
   ['/archive']: Archive,
   ['/about']: About,
+  ['/contacts']: Contacts,
 };
 
 export const App = () => {
