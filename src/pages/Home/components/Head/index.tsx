@@ -7,8 +7,8 @@ import css from './styles.module.scss';
 
 export const Head = () => {
   return (
-    <div class={css.head}>
-      <div class={cn(css.content, 'maxWidth')}>
+    <div class={cn(css.head, 'maxWidth')}>
+      <div class={css.content}>
         <h1 class={css.title}>Born to Silly</h1>
         <p class={css.description}>
           A heartfelt art pack featuring adorable foals and more!
