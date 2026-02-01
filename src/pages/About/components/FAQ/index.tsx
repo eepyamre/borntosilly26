@@ -3,10 +3,10 @@ import { useState } from 'preact/hooks';
 
 import css from './styles.module.scss';
 
-type FAQItem {
+type FAQItem = {
   question: string;
   answer: string;
-}
+};
 
 const faqData: FAQItem[] = [
   {
