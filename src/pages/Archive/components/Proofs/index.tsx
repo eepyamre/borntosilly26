@@ -15,8 +15,9 @@ export const Proofs = () => {
       <div class={css.content}>
         <div class={css.col}>
           <h2 class={css.title}>Receipt</h2>
-          <a class={css.imgWrapper} href={receipt1} target={'_blank'}>
-            <img class={css.img} src={receipt1} alt={'Receipt'} />
+
+          <a class={css.imgWrapper} href={receipt3} target={'_blank'}>
+            <img class={css.img} src={receipt3} alt={'Receipt'} />
             <ZoomIn class={css.zoom} />
           </a>
         </div>
@@ -25,12 +26,12 @@ export const Proofs = () => {
             Individual donations from the thread anons
           </h3>
           <div class={css.list}>
-            <a class={css.imgWrapper} href={receipt2} target={'_blank'}>
-              <img class={css.img} src={receipt2} alt={'Receipt'} />
+            <a class={css.imgWrapper} href={receipt1} target={'_blank'}>
+              <img class={css.img} src={receipt1} alt={'Receipt'} />
               <ZoomIn class={css.zoom} />
             </a>
-            <a class={css.imgWrapper} href={receipt3} target={'_blank'}>
-              <img class={css.img} src={receipt3} alt={'Receipt'} />
+            <a class={css.imgWrapper} href={receipt2} target={'_blank'}>
+              <img class={css.img} src={receipt2} alt={'Receipt'} />
               <ZoomIn class={css.zoom} />
             </a>
           </div>
