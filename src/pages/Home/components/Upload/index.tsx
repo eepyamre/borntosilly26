@@ -102,7 +102,7 @@ export const Upload = () => {
 
       const formData = new FormData();
 
-      formData.append('artistName', artistName.trim());
+      formData.append('artistName', artistName.trim().toLowerCase());
       files.forEach((fileWrapper) => {
         formData.append('artwork', fileWrapper.fileData);
       });
