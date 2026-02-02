@@ -46,7 +46,14 @@ export const Upload = () => {
           ? URL.createObjectURL(file)
           : undefined,
       }));
-      setFiles((prev) => [...prev, ...newFiles]);
+      const arr = [...files, ...newFiles];
+      if (arr.length > 10) {
+        setSubmitStatus('error');
+        setSubmitMessage(`Cannot upload more than 10 files at a time.`);
+        return;
+      }
+      setFiles(arr);
+
       setSubmitStatus('idle');
     }
   };
@@ -60,7 +67,13 @@ export const Upload = () => {
           ? URL.createObjectURL(file)
           : undefined,
       }));
-      setFiles((prev) => [...prev, ...newFiles]);
+      const arr = [...files, ...newFiles];
+      if (arr.length > 10) {
+        setSubmitStatus('error');
+        setSubmitMessage(`Cannot upload more than 10 files at a time.`);
+        return;
+      }
+      setFiles(arr);
       setSubmitStatus('idle');
     }
   };
@@ -87,28 +100,28 @@ export const Upload = () => {
         throw new Error('Please select at least one file to submit.');
       }
 
-      // mock
-      console.log('Submitting files:', {
-        files: files.map((f) => ({
-          name: f.fileData.name,
-          size: f.fileData.size,
-          type: f.fileData.type,
-        })),
-        artistName: artistName || 'Anonymous',
-        timestamp: new Date().toISOString(),
+      const formData = new FormData();
+
+      formData.append('artistName', artistName.trim());
+      files.forEach((fileWrapper) => {
+        formData.append('artwork', fileWrapper.fileData);
       });
+
+      const response = await fetch('/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Server responded with an error');
+      }
 
       setSubmitStatus('success');
       setSubmitMessage(
         `Successfully submitted ${files.length} file(s)! Thank you for your contribution.`,
       );
-
-      // TODO:
-      // TODO:
-      // TODO:
-      // TODO:
-      setSubmitStatus('error');
-      setSubmitMessage('NOTHING HAS BEEN SENT, THIS IS JUST A FORM MOCK');
 
       setFiles([]);
       setArtistName('');
@@ -243,7 +256,7 @@ export const Upload = () => {
                 placeholder={'Leave blank for anonymous'}
                 value={artistName}
                 onInput={(e) =>
-                  setArtistName((e.target as HTMLInputElement).value)
+                  setArtistName((e.target as HTMLInputElement).value.trim())
                 }
               />
             </label>
