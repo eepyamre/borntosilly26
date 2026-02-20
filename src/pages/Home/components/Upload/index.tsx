@@ -112,12 +112,15 @@ export const Upload = () => {
         body: formData,
       });
 
-      const result = await response.json();
-
+      let result: { message: string } | null = null;
+      try {
+        result = await response.json();
+      } catch (e) {
+        throw new Error('Server responded with an error');
+      }
       if (!response.ok) {
         throw new Error(result.message || 'Server responded with an error');
       }
-
       setSubmitStatus('success');
       setSubmitMessage(
         `Successfully submitted ${files.length} file(s)! Thank you for your contribution.`,
