@@ -13,7 +13,12 @@ export const Head = () => {
         <p class={css.description}>
           A heartfelt art pack featuring adorable foals and more!
         </p>
-        <p class={css.description}>Created to raise funds for [TBD]</p>
+        <p class={css.description}>
+          Created to raise funds for children in need.
+        </p>
+        <p class={css.description}>
+          The current charity of choice is Kids Rein.
+        </p>
       </div>
       <div class={css.imgWrapper}>
         <img class={css.img} src={silly} alt="Silly Stuffing" />

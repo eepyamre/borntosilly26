@@ -26,7 +26,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: 'Are there any content guidelines?',
-    answer: 'TBD. Discussion in the thread.',
+    answer: 'Keep it horsie, SFW, and free of hate symbols',
   },
   {
     question: 'Can I submit multiple pieces of art?',
