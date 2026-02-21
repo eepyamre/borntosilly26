@@ -7,7 +7,6 @@ export const NotFound = () => {
     <Layout>
       <div class={css.wrapper}>
         <h1 class={css.title}>404</h1>
-        <p class={css.text}>Page not found</p>
       </div>
     </Layout>
   );

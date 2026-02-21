@@ -281,7 +281,7 @@ export const Upload = () => {
         <div class={css.downloadWrapper}>
           <h3 class={css.uploadTitle}>Or download the last year's pack</h3>
           <Button
-            href={'https://borntosilly.com/borntosilly.zip'}
+            href={'https://2025.borntosilly.com/borntosilly.zip'}
             download={'borntosilly2025.zip'}
           >
             Download
