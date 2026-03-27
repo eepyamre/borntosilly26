@@ -21,8 +21,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: 'What is the deadline for submissions?',
-    answer:
-      'The deadline has not yet been set. Keep an eye on the discussions in the thread.',
+    answer: 'Perhaps around Apr 17th.',
   },
   {
     question: 'Are there any content guidelines?',
