@@ -1,22 +1,45 @@
 import cn from 'classnames';
-import { useEffect, useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 
 import { Button } from '@/components/Button';
 
 import css from './styles.module.scss';
 
 export const Impact = () => {
-  const [purchases, setPurchases] = useState(0);
+  const [target, setTarget] = useState(0);
+  const [displayed, setDisplayed] = useState(0);
+  const rafRef = useRef<number>(0);
 
   const fetchData = async () => {
     const res = await fetch('/purchases');
     const json = await res.json();
-    setPurchases(json.purchases);
+    setTarget(json.purchases);
   };
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    if (target <= 0) return;
+
+    const duration = 500;
+    const start = performance.now();
+
+    const animate = (now: number) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - (1 - progress) * (1 - progress);
+      setDisplayed(Math.round(eased * target));
+
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [target]);
 
   return (
     <div class={css.wrapper}>
@@ -28,7 +51,7 @@ export const Impact = () => {
           </p>
         </div>
         <div class={css.raised}>
-          <h2 class={css.subtitle}>{purchases}</h2>
+          <h2 class={css.subtitle}>{displayed}</h2>
           <span class={css.text}>Packs sold</span>
           <Button
             class={css.button}
