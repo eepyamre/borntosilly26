@@ -1,6 +1,8 @@
 import { ArrowUp } from '@/icons/ArrowUp';
 import cn from 'classnames';
 
+import { Button } from '@/components';
+
 import silly from '@/assets/silly.webp';
 
 import css from './styles.module.scss';
@@ -19,6 +21,12 @@ export const Head = () => {
         <p class={css.description}>
           The current charity of choice is Kids Rein.
         </p>
+        <Button
+          class={css.button}
+          href={'https://www.fatfreecartpro.com/i/14ozo?card'}
+        >
+          Buy the pack
+        </Button>
       </div>
       <div class={css.imgWrapper}>
         <img class={css.img} src={silly} alt="Silly Stuffing" />

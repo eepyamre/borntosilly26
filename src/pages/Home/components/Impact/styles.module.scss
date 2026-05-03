@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   flex: 1;
-  background-color: #fbead2;
+  // background-color: #fbead2;
   padding-block: 64px;
 
   @media (max-width: 768px) {
@@ -15,7 +15,8 @@
 }
 
 .title {
-  font-size: 4.5rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
   color: var(--burntOrange);
   background: linear-gradient(
     135deg,

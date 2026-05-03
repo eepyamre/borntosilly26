@@ -7,7 +7,7 @@ export const Home = () => {
   return (
     <Layout class={css.wrapper}>
       <Head />
-      <Upload />
+      {/* <Upload /> */}
       <Impact />
     </Layout>
   );
