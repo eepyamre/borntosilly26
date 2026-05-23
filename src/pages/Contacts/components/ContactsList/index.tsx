@@ -19,7 +19,7 @@ export const ContactsList = () => {
         </Link>
         <span>
           on the{' '}
-          <Link href="https://boards.4chan.org/mlp/thread/43186416">
+          <Link href="https://boards.4chan.org/mlp/thread/43258058">
             {' '}
             4chan thread
           </Link>
