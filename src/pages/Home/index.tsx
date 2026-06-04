@@ -1,6 +1,6 @@
 import { Layout } from '@/components';
 
-import { Head, Impact, Upload } from './components';
+import { Head, Impact } from './components';
 import css from './styles.module.scss';
 
 export const Home = () => {

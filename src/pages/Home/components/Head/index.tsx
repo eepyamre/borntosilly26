@@ -15,17 +15,10 @@ export const Head = () => {
         <p class={css.description}>
           A heartfelt art pack featuring adorable foals and more!
         </p>
-        <p class={css.description}>
-          Created to raise funds for children in need.
-        </p>
-        <p class={css.description}>
-          The current charity of choice is Kids Rein.
-        </p>
-        <Button
-          class={css.button}
-          href={'https://www.fatfreecartpro.com/i/14ozo?card'}
-        >
-          Buy the pack
+        <p class={css.description}>Created to raise funds for Kids Rein</p>
+
+        <Button class={css.button} href={'https://borntosilly.com/bts.zip'}>
+          Download the pack
         </Button>
       </div>
       <div class={css.imgWrapper}>

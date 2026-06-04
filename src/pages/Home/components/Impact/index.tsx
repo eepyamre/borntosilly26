@@ -6,19 +6,19 @@ import { Button } from '@/components/Button';
 import css from './styles.module.scss';
 
 export const Impact = () => {
-  const [target, setTarget] = useState(0);
-  const [displayed, setDisplayed] = useState(0);
+  const [target, setTarget] = useState(1025);
+  const [displayed, setDisplayed] = useState('0');
   const rafRef = useRef<number>(0);
 
-  const fetchData = async () => {
-    const res = await fetch('/purchases');
-    const json = await res.json();
-    setTarget(json.purchases);
-  };
+  // const fetchData = async () => {
+  //   const res = await fetch('/purchases');
+  //   const json = await res.json();
+  //   setTarget(json.purchases);
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   useEffect(() => {
     if (target <= 0) return;
@@ -30,7 +30,13 @@ export const Impact = () => {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
       const eased = 1 - (1 - progress) * (1 - progress);
-      setDisplayed(Math.round(eased * target));
+      const num = Math.round(eased * target);
+      setDisplayed(
+        new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+        }).format(num),
+      );
 
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(animate);
@@ -45,19 +51,19 @@ export const Impact = () => {
     <div class={css.wrapper}>
       <div class={cn(css.content, 'maxWidth')}>
         <div class={css.textWrapper}>
-          <h2 class={css.title}>Uploads are closed</h2>
+          <h2 class={css.title}>Donation closed</h2>
           <p class={css.description}>
-            You can buy the pack and support Kids Rein today!
+            Every penny was donated to the Kids Rein!
           </p>
+          <a href={'https://borntosilly.com/receipt_new.png'} class={css.link}>
+            Click here to see the receipt
+          </a>
         </div>
         <div class={css.raised}>
           <h2 class={css.subtitle}>{displayed}</h2>
-          <span class={css.text}>Packs sold</span>
-          <Button
-            class={css.button}
-            href={'https://www.fatfreecartpro.com/i/14ozo?card'}
-          >
-            Buy the pack
+          <span class={css.text}>Raised Total</span>
+          <Button class={css.button} href={'https://borntosilly.com/bts.zip'}>
+            Download the pack
           </Button>
         </div>
       </div>
