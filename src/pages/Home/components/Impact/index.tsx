@@ -55,14 +55,22 @@ export const Impact = () => {
           <p class={css.description}>
             Every penny was donated to the Kids Rein!
           </p>
-          <a href={'https://borntosilly.com/receipt_new.png'} class={css.link}>
+          <a
+            target={'_blank'}
+            href={'https://borntosilly.com/receipt_new.png'}
+            class={css.link}
+          >
             Click here to see the receipt
           </a>
         </div>
         <div class={css.raised}>
           <h2 class={css.subtitle}>{displayed}</h2>
           <span class={css.text}>Raised Total</span>
-          <Button class={css.button} href={'https://borntosilly.com/bts.zip'}>
+          <Button
+            target={'_blank'}
+            class={css.button}
+            href={'https://borntosilly.com/bts.zip'}
+          >
             Download the pack
           </Button>
         </div>

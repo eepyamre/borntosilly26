@@ -17,7 +17,11 @@ export const Head = () => {
         </p>
         <p class={css.description}>Created to raise funds for Kids Rein</p>
 
-        <Button class={css.button} href={'https://borntosilly.com/bts.zip'}>
+        <Button
+          target={'_blank'}
+          class={css.button}
+          href={'https://borntosilly.com/bts.zip'}
+        >
           Download the pack
         </Button>
       </div>
