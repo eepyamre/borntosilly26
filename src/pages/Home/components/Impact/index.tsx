@@ -6,7 +6,7 @@ import { Button } from '@/components/Button';
 import css from './styles.module.scss';
 
 export const Impact = () => {
-  const [target, setTarget] = useState(1025);
+  const [target, setTarget] = useState(1125);
   const [displayed, setDisplayed] = useState('0');
   const rafRef = useRef<number>(0);
 
